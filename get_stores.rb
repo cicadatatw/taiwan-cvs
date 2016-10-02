@@ -65,7 +65,7 @@ for brand in brands
 	end
 
 
-	File.open("data/#{brand}.txt", "w+:utf-8") do |i|
+	File.open("data/#{brand}.json", "w+:utf-8") do |i|
 	    i.write(JSON.pretty_generate(data))
 	end
 
