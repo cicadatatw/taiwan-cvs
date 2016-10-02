@@ -1,5 +1,6 @@
 # encoding=utf-8 
 require 'open-uri'
+require 'json'
 
 brands = ["7-11", "family", "hilife", "okmart"]
 
@@ -65,7 +66,7 @@ for brand in brands
 
 
 	File.open("data/#{brand}.txt", "w+:utf-8") do |i|
-	    i.write(data)
+	    i.write(JSON.pretty_generate(data))
 	end
 
 end
